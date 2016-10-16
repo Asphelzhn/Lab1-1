@@ -1,7 +1,7 @@
-package l1;//first change
-import java.util.*;//second change
-public class lab1 {//third change
-public static int N=200;//fourth change
+package l1;
+import java.util.*;
+public class lab1 {
+	public static int N=200;
 	public static String str,strin;										//输入
 	public static Vector<Vector<STR>> S=new Vector<Vector<STR>>();		//结果序列
 	public static String strtemp;										//完成赋值之后的序列
@@ -98,13 +98,11 @@ public static int N=200;//fourth change
 				{
 					if (printorder!=0 && nownum>0) System.out.print('+'); 
 					printorder++;
-					if (!(nownum==1 && (nowstr.size()!=0))) System.out.print(nownum);
+					System.out.print(nownum);
 					if (nowstr==null) continue;
 					for (int j=0;j<nowstr.size();j++)
-					{
-						if (!(j==0 && nownum==1.0))System.out.print("*");
-						System.out.print(nowstr.elementAt(j));
-					}
+						System.out.print("*"+nowstr.elementAt(j));
+					
 				}	
 			}//endof for
 			System.out.println();
@@ -167,16 +165,13 @@ public static int N=200;//fourth change
 				if (nownum!=0)
 				{
 					if (printorder!=0 && nownum>0) System.out.print('+'); 
-					if (!(nownum==1 && (nowstr.size()!=0))) System.out.print(nownum);					
+					System.out.print(nownum);
 					if (nowstr==null) continue;
 					for (int j=0;j<nowstr.size();j++)
-					{
-						if (!(j==0 && nownum==1.0))System.out.print("*");
-						System.out.print(nowstr.elementAt(j));
-					}
+						System.out.print("*"+nowstr.elementAt(j));
 					printorder++;
 				}
-			}
+			}			 
 		}//endof for
 		System.out.println();
 	}//endof derivative()
@@ -356,21 +351,21 @@ public static int N=200;//fourth change
 		{
 				if (STA[i].getFlag()==0) 	//整数
 				{
-					temp =new STR(new Vector<String>(), STA[i].getIntn(),1);
+					temp =new STR(null, STA[i].getIntn(),1);
 					tempv=new Vector<STR>();
 					tempv.add(temp);
 					S.add(tempv);
 				}
 				else if (STA[i].getFlag()==2)		//实数
 				{
-					temp =new STR(new Vector<String>(), STA[i].getFlo(),1);
+					temp =new STR(null, STA[i].getFlo(),1);
 					tempv=new Vector<STR>();
 					tempv.add(temp);
 					S.add(tempv);
 				}
 				else if (STA[i].getFlag()==3)		//字符（串）
 				{
-					temp =new STR(new Vector<String>(),1,2);
+					temp =new STR(null,1,2);
 					Vector<String> sss=new Vector<String>();
 					sss.add(STA[i].getVal());
 					temp.setmString(sss);
