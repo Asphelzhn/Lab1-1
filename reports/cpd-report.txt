@@ -1,0 +1,257 @@
+Found a 16 line (217 tokens) duplication in the following files: 
+Starting at line 369 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 480 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+	public static void add() //加法运算
+	{
+		Vector<STR> s1=S.elementAt(S.size()-1);//取出头两项
+		S.setSize(S.size()-1);
+		Vector<STR> s2=S.elementAt(S.size()-1);
+		S.setSize(S.size()-1);
+		Vector<STR> ss=new Vector<STR>(); //临时项，计算完毕后送入计算序列
+		for (int i=0;i<s1.size();i++)	//含有字符（串）变量的多项式加法
+			for (int j=0;j<s2.size();j++)
+			{
+				int s1iflag=(int) s1.elementAt(i).getflag();
+				float s1inum=(float) s1.elementAt(i).getmNumber();
+				Vector<String> s1istr = (Vector<String>) s1.elementAt(i).getmString();
+				int s2jflag=(int) s2.elementAt(j).getflag();
+				float s2jnum=(float) s2.elementAt(j).getmNumber();
+				Vector<String> s2jstr = (Vector<String>) s2.elementAt(j).getmString();
+=====================================================================
+Found a 27 line (145 tokens) duplication in the following files: 
+Starting at line 219 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 286 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+				if ((f.charAt(i-1)>='0' && f.charAt(i-1)<='9')||(f.charAt(i-1)>='a' && f.charAt(i-1)<='z')){
+							if (fl2==0){
+								if (r1.charAt(0)>='0'&&r1.charAt(0)<='9'){
+						 		int n = Integer.parseInt(r1);
+						 		n*=fla;
+						 		fla=1;
+						 		//////////System.out.print(n+" ");
+								STA[sum].setIntn(n);
+								STA[sum].setFlag(0);
+								}else{
+									/////////System.out.print(r1+" ");
+									STA[sum].setVal(r1);
+									STA[sum].setFlag(3);
+								}
+								r1="";
+								sum++;
+							}else{
+								float n=Float.parseFloat(r1);
+								n*=(float)fla;
+								fla=1;
+								r1="";
+								STA[sum].setFlo(n);
+								STA[sum].setFlag(2);
+								sum++;
+								fl2=0;
+							}
+				}		
+=====================================================================
+Found a 12 line (92 tokens) duplication in the following files: 
+Starting at line 93 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 164 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+					if (!(nownum==1 && (nowstr.size()!=0))) {
+						System.out.print(nownum);
+					}
+					if (nowstr==null) {
+						continue;
+					}
+					for (int j=0;j<nowstr.size();j++){
+						if (!(j==0 && nownum==1.0)){
+							System.out.print("*");
+						}
+						System.out.print(nowstr.elementAt(j));
+					}
+=====================================================================
+Found a 6 line (71 tokens) duplication in the following files: 
+Starting at line 81 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 155 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+			int printorder = 0;
+			for (int i=0;i<S.elementAt(S.size()-1).size();i++)		//数字、字符（串）分开输出
+			{
+				STR NOW=S.elementAt(S.size()-1).elementAt(i);
+				Vector<String> nowstr=NOW.getmString();
+				float nownum=NOW.getmNumber();
+=====================================================================
+Found a 5 line (61 tokens) duplication in the following files: 
+Starting at line 81 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 131 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 155 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+			int printorder = 0;
+			for (int i=0;i<S.elementAt(S.size()-1).size();i++)		//数字、字符（串）分开输出
+			{
+				STR NOW=S.elementAt(S.size()-1).elementAt(i);
+				Vector<String> nowstr=NOW.getmString();
+=====================================================================
+Found a 8 line (51 tokens) duplication in the following files: 
+Starting at line 45 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 120 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+					while (strin.charAt(count) == ' ' || strin.charAt(count) == (char) 9){
+						count++;
+					}
+				}
+				if (str.indexOf(val) == -1) 		{//变量不在字符中
+					System.out.println("ERROR!");
+					return;
+				}
+=====================================================================
+Found a 5 line (51 tokens) duplication in the following files: 
+Starting at line 369 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 480 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 523 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+	public static void add() //加法运算
+	{
+		Vector<STR> s1=S.elementAt(S.size()-1);//取出头两项
+		S.setSize(S.size()-1);
+		Vector<STR> s2=S.elementAt(S.size()-1);
+=====================================================================
+Found a 6 line (51 tokens) duplication in the following files: 
+Starting at line 421 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 443 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+							ff1=1;
+							if (sskflag==2)//判断两个含有字符串的项可以合并的同类项
+							{
+								String aa="",bb="";
+								for (int l=0;l<sskstr.size();l++){aa+=sskstr.elementAt(l);}
+								for (int l=0;l<s1istr.size();l++){bb+=s1istr.elementAt(l);}
+=====================================================================
+Found a 5 line (45 tokens) duplication in the following files: 
+Starting at line 257 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 271 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+								STA[sum].setChr(r2.charAt(ii-1));
+								STA[sum].setFlag(1);
+								sum++;
+								ii--;
+								r2=r2.substring(0, r2.length()-1);
+=====================================================================
+Found a 6 line (39 tokens) duplication in the following files: 
+Starting at line 326 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 333 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+					temp =new STR(new Vector<String>(), STA[i].getIntn(),1);
+					tempv=new Vector<STR>();
+					tempv.add(temp);
+					S.add(tempv);
+				}
+				else if (STA[i].getFlag()==2)		//实数
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 326 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 333 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 343 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+					temp =new STR(new Vector<String>(), STA[i].getIntn(),1);
+					tempv=new Vector<STR>();
+					tempv.add(temp);
+					S.add(tempv);
+				}
+				else if (STA[i].getFlag()==2)		//实数
+=====================================================================
+Found a 5 line (33 tokens) duplication in the following files: 
+Starting at line 38 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 112 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+				String val = ""; 
+				while (strin.charAt(count) == ' ' || strin.charAt(count) == (char) 9) {
+					count++;	//char(9) 水平制表符
+				}
+				while (strin.charAt(count) != '=') {
+=====================================================================
+Found a 6 line (31 tokens) duplication in the following files: 
+Starting at line 255 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 311 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+							while (r2.charAt(ii-1)!='('){
+								//////System.out.print(r2.charAt(ii-1)+" ");
+								STA[sum].setChr(r2.charAt(ii-1));
+								STA[sum].setFlag(1);
+								sum++;
+								ii--;
+=====================================================================
+Found a 4 line (29 tokens) duplication in the following files: 
+Starting at line 271 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 312 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+								STA[sum].setChr(r2.charAt(ii-1));
+								STA[sum].setFlag(1);
+								sum++;
+								ii--;
+=====================================================================
+Found a 3 line (29 tokens) duplication in the following files: 
+Starting at line 371 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 373 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 482 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 484 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 525 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+		Vector<STR> s1=S.elementAt(S.size()-1);//取出头两项
+		S.setSize(S.size()-1);
+		Vector<STR> s2=S.elementAt(S.size()-1);
+=====================================================================
+Found a 3 line (27 tokens) duplication in the following files: 
+Starting at line 39 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 45 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 113 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 120 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+				while (strin.charAt(count) == ' ' || strin.charAt(count) == (char) 9) {
+					count++;	//char(9) 水平制表符
+				}
+=====================================================================
+Found a 5 line (27 tokens) duplication in the following files: 
+Starting at line 87 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 160 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+				if (nownum!=0)
+				{
+					if (printorder!=0 && nownum>0) {
+						System.out.print('+'); 
+					}
+=====================================================================
+Found a 2 line (27 tokens) duplication in the following files: 
+Starting at line 141 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 475 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+				float nownumm=S.elementAt(S.size()-1).elementAt(i).getmNumber();
+				S.elementAt(S.size()-1).elementAt(i).setmString(nowstr);
+=====================================================================
+Found a 4 line (27 tokens) duplication in the following files: 
+Starting at line 426 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 448 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+								for (int l=0;l<s1istr.size();l++){bb+=s1istr.elementAt(l);}
+								if (aa.equals(bb)) //可以合并的同类项
+								{
+									ss.elementAt(k).setmNumber(ssknum+s1inum);
+=====================================================================
+Found a 1 line (26 tokens) duplication in the following files: 
+Starting at line 390 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 448 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+						for (int l=0;l<s2jstr.size();l++){bb+=s2jstr.elementAt(l);}
+=====================================================================
+Found a 4 line (26 tokens) duplication in the following files: 
+Starting at line 393 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 404 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+						{
+							s1.elementAt(i).setmNumber(s1inum+s2jnum);
+							ss.addElement(s1.elementAt(i));
+						}
+=====================================================================
+Found a 1 line (25 tokens) duplication in the following files: 
+Starting at line 207 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+Starting at line 209 of C:\Users\haoning\Desktop\Lab4\src\l1\Lab1.java
+
+				if (    (f.charAt(i)=='-') && (   	(  ( ( f.charAt(i+1)>='0' && f.charAt(i+1)<='9') ||( f.charAt(i+1)>='a' && f.charAt(i+1)<='z') )
